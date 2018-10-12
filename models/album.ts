@@ -4,17 +4,17 @@ import api from '../api'
 
 export interface AlbumSchema {
   userId: number
-  id: number
-  title: string
+  id    : number
+  title : string
 }
 
 export class Album implements AlbumSchema {
   userId: number
-  id: number
-  title: string
+  id    : number
+  title : string
 
-  user: UserSchema | void = null
-  photos: PhotoSchema[] = []
+  user  : UserSchema | void = null
+  photos: PhotoSchema[]     = []
 
   constructor(albumData: AlbumSchema) {
     Object.assign(this, albumData)
@@ -22,7 +22,7 @@ export class Album implements AlbumSchema {
 
   static async findById(albumId: number, includes?: string[]): Promise<Album> {
     const { data } = await api.get<AlbumSchema>(`albums/${albumId}`)
-    const album = new Album(data)
+    const album    = new Album(data)
     if (includes && includes.length) await album.loadIncludes(includes)
     return album
   }
@@ -30,13 +30,13 @@ export class Album implements AlbumSchema {
   async loadIncludes(includes: string[]): Promise<void> {
     await Promise.all(includes.map(async (include) => {
       switch (include) {
-        case 'user':
+        case 'user': 
           const { data: userData } = await api.get<UserSchema>(`users/${this.userId}`)
-          this.user = userData
+                this.user          = userData
           break
-        case 'photos':
+        case 'photos': 
           const { data: photoData } = await api.get<PhotoSchema[]>(`photos?albumId=${this.id}`)
-          this.photos = photoData
+                this.photos         = photoData
           break
       }
     }))
