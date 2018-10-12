@@ -13,8 +13,8 @@ export class Album implements AlbumSchema {
   id    : number
   title : string
 
-  user  : UserSchema | void = null
-  photos: PhotoSchema[]     = []
+  user   : UserSchema | void = null
+  photos: PhotoSchema[]      = []
 
   constructor(albumData: AlbumSchema) {
     Object.assign(this, albumData)
@@ -27,6 +27,13 @@ export class Album implements AlbumSchema {
     return album
   }
 
+  static async create(album: Album): Promise<void>{
+    await api.post<Album>('albums', album)
+  }
+
+  static async updateById(albumId: number, album: Album): Promise<void>{
+    await api.put<Album>(`albums/${albumId}`, album)
+  }
   async loadIncludes(includes: string[]): Promise<void> {
     await Promise.all(includes.map(async (include) => {
       switch (include) {
