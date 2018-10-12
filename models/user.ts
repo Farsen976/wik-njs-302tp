@@ -24,5 +24,8 @@ export class User implements UserSchema{
   static async deleteUser(userId: number): Promise<void>{
     await api.delete(`users/${userId}`)
   }
+  static async updateById(userId: number, user: User): Promise<void>{
+    const { data } = await api.put<User>(`users/${userId}`, user)
+  }
 }
 

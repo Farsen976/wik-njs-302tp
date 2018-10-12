@@ -18,13 +18,6 @@
   },
   "users": [
     {
-      "id": 1,
-      "name": "toto",
-      "username": "toto123",
-      "email": "toto@gmail.com",
-      "address": "3 rue de paris"
-    },
-    {
       "id": 2
     },
     {
@@ -45,44 +38,16 @@
       "email": "toto@gmail.com",
       "address": "cheztamere@bitch.com",
       "id": 7
-    }
-  ],
-  "Albums": [
+    },
     {
-      "userId": 1,
-      "id": 2,
-      "title": "sunt qui excepturi placeat culpa",
-      "user": {
-        "id": 1,
-        "name": "Leanne Graham",
-        "username": "Bret",
-        "email": "Sincere@april.biz",
-        "address": {
-          "street": "Kulas Light",
-          "suite": "Apt. 556",
-          "city": "Gwenborough",
-          "zipcode": "92998-3874",
-          "geo": []
-        },
-        "phone": "1-770-736-8031 x56442",
-        "website": "hildegard.org",
-        "company": {
-          "name": "Romaguera-Crona",
-          "catchPhrase": "Multi-layered client-server neural-net",
-          "bs": "harness real-time e-markets"
-        }
-      },
-      "photos": [
-        {
-          "albumId": 2,
-          "id": 51,
-          "title": "non sunt voluptatem placeat consequuntur rem incidunt",
-          "url": "https://via.placeholder.com/600/8e973b",
-          "thumbnailUrl": "https://via.placeholder.com/150/8e973b"
-        }
-      ]
+      "name": "toto2",
+      "username": "toto123",
+      "email": "toto@gmail.com",
+      "address": "cheztamere@bitch.com",
+      "id": 8
     }
   ],
+  "Albums": [],
   "photos": [
     {
       "albumId": 2,

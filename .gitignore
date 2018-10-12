@@ -365,5 +365,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+db.json
 
 # End of https://www.gitignore.io/api/node,linux,macos,windows,webstorm,phpstorm,sublimetext,phpstorm+all,visualstudiocode
