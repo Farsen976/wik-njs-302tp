@@ -15,11 +15,14 @@ export class User implements UserSchema{
   }
   static async create(user: User): Promise<void>{
       await api.post('/users',user)
-  }
+  } 
   static async findById(userId: number): Promise<User>{
     const { data } = await api.get<User>(`users/${userId}`)
     const user     = new User(data)
     return user
+  }
+  static async deleteUser(userId: number): Promise<void>{
+    await api.delete(`users/${userId}`)
   }
 }
 

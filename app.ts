@@ -12,6 +12,7 @@ async function run() {
   const user = new User(data)
  console.log(await User.create(user))
   console.log(await User.findById(1))
+ console.log(await User.deleteUser(1))
 }
 
 run().catch((err) => {
