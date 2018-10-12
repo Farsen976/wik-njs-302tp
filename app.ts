@@ -17,8 +17,14 @@ async function run() {
     address : 'foo@bar.com'
   }
   const user = new User(data)
+//  console.log(await User.create(user))
+//   console.log(await User.findById(1))
+//  console.log(await User.deleteUser(1))
  //console.log(await User.create(user))
  //console.log(await User.findById(1))
+//  await User.updateById(1, user)
+//console.log(album)
+//console.log(await User.findById(2,'album'))
  //await User.updateById(1, user)
 }
 
