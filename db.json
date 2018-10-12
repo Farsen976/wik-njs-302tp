@@ -25,8 +25,12 @@
       "address" : "3 rue de paris"
     }
   ],
-  "Album": {
-    "user": 
+  "Albums": [
+    {
+    "userId": 1,
+    "id"    : 2,
+    "title" : "sunt qui excepturi placeat culpa",
+    "user"  : 
      { "id": 1,
        "name"    : "Leanne Graham",
        "username": "Bret",
@@ -49,9 +53,14 @@
          "title"       : "non sunt voluptatem placeat consequuntur rem incidunt",
          "url"         : "https://via.placeholder.com/600/8e973b",
          "thumbnailUrl": "https://via.placeholder.com/150/8e973b" }
-        ],
-    "userId": 1,
-    "id"    : 2,
-    "title" : "sunt qui excepturi placeat culpa"
+        ]
     }
+  ],
+  "photos": 
+     [ { "albumId": 2,
+         "id"          : 51,
+         "title"       : "non sunt voluptatem placeat consequuntur rem incidunt",
+         "url"         : "https://via.placeholder.com/600/8e973b",
+         "thumbnailUrl": "https://via.placeholder.com/150/8e973b" }
+        ]
 }

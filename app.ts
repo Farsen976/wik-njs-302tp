@@ -1,8 +1,5 @@
 import Album from './models/album'
-import { User } from './models/user';
-
-
-
+import { User } from './models/user'
 
 async function run() {
   const album = await Album.findById(2, ['user', 'photos'])
