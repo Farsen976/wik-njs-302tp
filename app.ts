@@ -9,7 +9,8 @@ async function run() {
     title : 'sauvage sauvage Mati tt'
   }
   //await Album.create(new Album(mockAlbum))
-  await Album.updateById(9, new Album(mockAlbum))
+  await Album.deleteById(9)
+  //await Album.updateById(9, new Album(mockAlbum))
   const data  = {
     name    : 'toto457456465',
     username: 'toto123',
