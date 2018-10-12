@@ -21,5 +21,8 @@ export class User implements UserSchema{
     const user     = new User(data)
     return user
   }
+  static async updateById(userId: number, user: User): Promise<void>{
+    const { data } = await api.put<User>(`users/${userId}`, user)
+  }
 }
 
