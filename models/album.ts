@@ -30,6 +30,10 @@ export class Album implements AlbumSchema {
   static async create(album: Album): Promise<void>{
     await api.post<Album>('albums', album)
   }
+
+  static async updateById(albumId: number, album: Album): Promise<void>{
+    await api.put<Album>(`albums/${albumId}`, album)
+  }
   async loadIncludes(includes: string[]): Promise<void> {
     await Promise.all(includes.map(async (include) => {
       switch (include) {
